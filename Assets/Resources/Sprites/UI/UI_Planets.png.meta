@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: adaf600d3c2df0846ac517b04e891a71
+timeCreated: 1429114972
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UI_Planets_1
+    21300002: UI_Planets_5
+    21300004: UI_Planets_6
+    21300006: UI_Planets_7
+    21300008: UI_Planets_14
+    21300010: UI_Planets_16
+    21300012: UI_Planets_21
+    21300014: UI_Planets_22
+    21300016: UI_Planets_23
+    21300018: UI_Planets_24
+    21300020: UI_Planets_25
+    21300022: UI_Planets_27
+    21300024: UI_Planets_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: UI_Planets_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 412
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_5
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 421
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_6
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 399
+        width: 172
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 484
+        width: 90
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_14
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 6
+        width: 309
+        height: 170
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 433
+        width: 156
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 210
+        width: 177
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 209
+        width: 165
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_23
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 217
+        width: 157
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_24
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 215
+        width: 170
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_25
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 212
+        width: 149
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 284
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UI_Planets_29
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 0
+        width: 296
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
