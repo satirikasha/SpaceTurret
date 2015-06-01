@@ -61,7 +61,7 @@
 
     public static void Delete() {
       File.Delete(Application.persistentDataPath + "/PlayerData.dat");
-      _Current = null;
+      _Current = new PlayerData();
     }
   }
 }

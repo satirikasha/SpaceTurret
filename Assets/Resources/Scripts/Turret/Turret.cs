@@ -27,13 +27,13 @@ namespace SpaceTurret.Game {
     void Start() {
       _Animator = this.GetComponent<Animator>();
       _Collider = this.GetComponent<SphereCollider>();
-      TargetAngle = IsOnTop ? 180 : 0;
+      TargetAngle = 0;
       TargetForce = Settings.DefaultForce;
       if(!IsAI) {
         Widget.SetForce(TargetForce);
         Widget.SetAngle(TargetAngle);
       }
-      if(IsAI) {
+      if(IsOnTop) {
         GameManager.Current.Player2_Turrets.Add(this);
       }
       else {
@@ -42,7 +42,9 @@ namespace SpaceTurret.Game {
     }
 
     void FixedUpdate() {
-      this.transform.rotation = Quaternion.Euler(0, 0, Mathf.SmoothDampAngle(this.transform.rotation.eulerAngles.z, TargetAngle, ref _CurrentAngularVelocity, Settings.DampAngleTime));
+      this.transform.rotation = !IsOnTop ?
+        Quaternion.Euler(0, 0, Mathf.SmoothDampAngle(this.transform.rotation.eulerAngles.z, TargetAngle, ref _CurrentAngularVelocity, Settings.DampAngleTime)) :
+        Quaternion.Euler(0, 0, Mathf.SmoothDampAngle(this.transform.rotation.eulerAngles.z, TargetAngle + 180, ref _CurrentAngularVelocity, Settings.DampAngleTime));
     }
 
     void OnTriggerEnter(Collider collider) {
@@ -87,7 +89,7 @@ namespace SpaceTurret.Game {
     }
 
     public void SetAngle(float angle) {
-      TargetAngle = IsOnTop ? 180 - angle : angle;
+      TargetAngle = angle;
       if(!IsAI) {
         Widget.SetAngle(TargetAngle);
       }

@@ -45,8 +45,9 @@
       ForcePanel.Hide();
       yield return new WaitForSeconds(1f);
       ButtonPanel.Show();
-      yield return new WaitForSeconds(1.5f);
+      yield return new WaitForSeconds(0.5f);
       FireButton.gameObject.SetActive(true);
+      yield return new WaitForSeconds(1f);
       ButtonPress.SetActive(true);
       while(!_FireButtonPressed)
         yield return false;

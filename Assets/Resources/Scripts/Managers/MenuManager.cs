@@ -57,6 +57,10 @@
       }
     }
 
+    public void StartMultiPlayerLevel() {
+      Loading.LoadingManager.LoadHeavyLevel("Multiplayer");
+    }
+
     public void ClearProgress() {
       Data.PlayerData.Delete();
       if(OnClearProgress != null)

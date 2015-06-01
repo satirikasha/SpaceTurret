@@ -28,6 +28,7 @@ namespace SpaceTurret.Game {
 
     public List<Turret> Player1_Turrets { get; set; }
     public List<Turret> Player2_Turrets { get; set; }
+    
     public List<Rigidbody> GravityAffectable;
     public List<Rigidbody> ExplosionAffectable;
 
@@ -36,6 +37,8 @@ namespace SpaceTurret.Game {
     public Image PausePanel;
     public GameObject PauseMenu;
     public GameObject StartMenu;
+    [Space(10)]
+    public bool IsMultiPlayerGame;
 
     #region Flags
     public bool HasWonTheGame { get; private set; }
@@ -64,9 +67,12 @@ namespace SpaceTurret.Game {
       Player1_Turrets = new List<Turret>();
       Player2_Turrets = new List<Turret>();
       GravityAffectable = new List<Rigidbody>();
-      var nextLevelName = "Level" + (int.Parse(Application.loadedLevelName.Replace("Level", "")) + 1);
-      if(Application.CanStreamedLevelBeLoaded(nextLevelName))
-        NextLevelName = nextLevelName;
+      int nextLevelNum;
+      if(int.TryParse(Application.loadedLevelName.Replace("Level", ""), out nextLevelNum)) {
+        var nextLevelName = "Level" + (nextLevelNum + 1);
+        if(Application.CanStreamedLevelBeLoaded(nextLevelName))
+          NextLevelName = nextLevelName;
+      }
     }
 
     private void PresetEffects() {
@@ -143,8 +149,14 @@ namespace SpaceTurret.Game {
     public void ShowGameEndMenu(bool hasWon) {
       GameEnded = true;
       var text = PauseMenu.transform.GetChild(0).GetComponent<Text>();
-      text.text = hasWon ? "You won!" : "You lost!";
-      text.color = hasWon ? Color.green : Color.red;
+      if(!IsMultiPlayerGame) {
+        text.text = hasWon ? "You won!" : "You lost!";
+        text.color = hasWon ? Color.green : Color.red;
+      }
+      else {
+        text.text = hasWon ? "Player 1 won!" : "Player 2 won!";
+        text.color = Color.green;
+      }
       ShowPauseMenu();
     }
 
