@@ -48,7 +48,7 @@
         foreach(Rigidbody rb in GameManager.Current.ExplosionAffectable) {
           rb.AddForce(Settings.BigExplosionForce * new Vector3(0, Settings.BigExplosionRadius / (rb.transform.position.y - this.transform.position.y), 0), ForceMode.Impulse);
         }
-        GameManager.Current.ForceWaveEffect.Show(this.transform.position);
+        GameManager.Current.ForceWaveFactory.Show(this.transform.position);
         _Collider.enabled = false;
         OnHit();
         SetMode(ShieldMode.Destroying);

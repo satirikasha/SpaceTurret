@@ -18,11 +18,10 @@ namespace SpaceTurret.Game {
     }
     private static GameManager _Current;
 
-    public ExplosionEffect ExplosionEffect { get; private set; }
-    public ForceWaveEffect ForceWaveEffect { get; private set; }
-
     public RocketFactory RocketFactory { get; private set; }
     public StarBurstFactory StarBurstFactory { get; private set; }
+    public ExplosionFactory ExplosionFactory { get; private set; }
+    public ForceWaveFactory ForceWaveFactory { get; private set; }
 
     public string NextLevelName { get; private set; }
 
@@ -51,10 +50,6 @@ namespace SpaceTurret.Game {
       ShowStartMenu();
       PrewarmTriggers();
       PresetSelf();
-    }
-
-    void Start() {
-      PresetEffects();
       PresetFactories();
     }
 
@@ -75,16 +70,15 @@ namespace SpaceTurret.Game {
       }
     }
 
-    private void PresetEffects() {
-      ExplosionEffect = Instantiate(Resources.Load<ExplosionEffect>(ResourcePaths.Explosion));
-      ForceWaveEffect = Instantiate(Resources.Load<ForceWaveEffect>(ResourcePaths.ForceWave));
-    }
-
     private void PresetFactories() {
       RocketFactory = new GameObject("RocketFactory", typeof(RocketFactory)).GetComponent<RocketFactory>();
       RocketFactory.AddRockets(10);
       StarBurstFactory = new GameObject("StarBurstFactory", typeof(StarBurstFactory)).GetComponent<StarBurstFactory>();
       StarBurstFactory.AddEffects(3);
+      ExplosionFactory = new GameObject("ExplosionFactory", typeof(ExplosionFactory)).GetComponent<ExplosionFactory>();
+      ExplosionFactory.AddEffects(10);
+      ForceWaveFactory = new GameObject("ForceWaveFactory", typeof(ForceWaveFactory)).GetComponent<ForceWaveFactory>();
+      ForceWaveFactory.AddEffects(3);
     }
 
     public void OnTurretDown(Turret turret) {

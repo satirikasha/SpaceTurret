@@ -5,10 +5,9 @@ using UnityEngine;
 namespace SpaceTurret.CommonResources {
   public static class ResourcePaths {
     private const string _SpritesFolder = "Sprites/";
+    private const string _SpritesUIFolder = _SpritesFolder + "UI/";
 
-    private const string _UIFolder = _SpritesFolder + "UI/";
-
-    public const string RatingStars = _UIFolder + "RatingStars";
+    public const string RatingStars = _SpritesUIFolder + "RatingStars";
 
     private static Sprite[] _ProgressStars;
     public static Sprite GetProgressStar(bool filled) {
@@ -33,8 +32,6 @@ namespace SpaceTurret.Menu {
     private const string _BackgroundsFolder = _SpritesFolder + "Backgrounds";
     private const string _UIFolder = _SpritesFolder + "UI/";
 
-    public const string MenuStars = _PrefabsFolder + "MenuStars";
-
     public static Sprite GetRandomBackground() {
       var mas = Resources.LoadAll<Sprite>(_BackgroundsFolder);
       return mas[UnityEngine.Random.Range(0, mas.Length)];
@@ -45,14 +42,15 @@ namespace SpaceTurret.Menu {
 namespace SpaceTurret.Game {
   public static class ResourcePaths {
     private const string _PrefabsFolder = "Prefabs/";
+    private const string _PrefabsEssentialsFolder = _PrefabsFolder + "Essentials/";
     private const string _SpritesFolder = "Sprites/";
-    private const string _SpritesUIFolder = "Sprites/UI/";
+    private const string _SpritesUIFolder = _SpritesFolder + "UI/";
 
-    public const string Explosion = _PrefabsFolder + "ExplosionEffect";
-    public const string ForceWave = _PrefabsFolder + "ForceWaveEffect";
-    public const string StarBurst = _PrefabsFolder + "StarBurstEffect";
+    public const string Explosion = _PrefabsEssentialsFolder + "ExplosionEffect";
+    public const string ForceWave = _PrefabsEssentialsFolder + "ForceWaveEffect";
+    public const string StarBurst = _PrefabsEssentialsFolder + "StarBurstEffect";
 
-    public const string Rocket    = _PrefabsFolder + "Rocket";
+    public const string Rocket    = _PrefabsEssentialsFolder + "Rocket";
 
     public const string FireButton = _SpritesUIFolder + "th-Red-button";
   }

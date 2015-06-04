@@ -15,8 +15,6 @@
     }
 
     public void Show(Vector2 position) {
-      //Debug.DrawLine(position + new Vector2(1, 1), position - new Vector2(1, 1), Color.red, 10f);
-      //Debug.DrawLine(position + new Vector2(1, -1), position - new Vector2(1, -1), Color.red, 10f);
       this.transform.position = position;
       Play();
     }

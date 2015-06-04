@@ -57,7 +57,7 @@
         if(collider.tag == "Collectable") {
           return;
         }
-        GameManager.Current.ExplosionEffect.Show(this.transform.position);
+        GameManager.Current.ExplosionFactory.Show(this.transform.position);
         foreach(Rigidbody rb in GameManager.Current.ExplosionAffectable) {
           rb.AddExplosionForce(Settings.ExplosionForce, this.transform.position, Settings.ExplosionRadius, 0f, ForceMode.Impulse);
         }

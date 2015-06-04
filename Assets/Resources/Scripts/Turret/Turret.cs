@@ -66,7 +66,7 @@ namespace SpaceTurret.Game {
       GameManager.Current.OnTurretDown(this);
       for(int i = 0; i < Settings.BlowUpIterations; i++) {
         yield return new WaitForSeconds(delay);
-        GameManager.Current.ExplosionEffect.Show(this.transform.position.ToVector2() + Settings.BlowUpRadius * Random.insideUnitCircle);
+        GameManager.Current.ExplosionFactory.Show(this.transform.position.ToVector2() + Settings.BlowUpRadius * Random.insideUnitCircle);
         delay = Random.Range(Settings.BlowUpDelay - Settings.BlowUpDelayDelta, Settings.BlowUpDelay + Settings.BlowUpDelayDelta);
       }
     }
