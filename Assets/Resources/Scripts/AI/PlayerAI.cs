@@ -149,18 +149,17 @@
         angleMutation = angleMutation * obj.AngleMutationSign;
       }
       else {
-        var sign = Utils.GetRandomSign();
-        angleMutation = angleMutation * sign;
-        obj.AngleMutationSign = sign;
+        obj.AngleMutationSign = Utils.GetRandomSign();
+        angleMutation = angleMutation * obj.AngleMutationSign;
       }
 
       if(obj.ForceMutationSign.IsSign()) {
         forceMutation = forceMutation * obj.ForceMutationSign;
       }
       else {
-        var sign = Utils.GetRandomSign();
-        forceMutation = forceMutation * sign;
-        obj.ForceMutationSign = sign;
+        obj.ForceMutationSign = Utils.GetRandomSign();
+        forceMutation = forceMutation * obj.ForceMutationSign;
+        
       }
 
       obj.Angle += angleMutation;
